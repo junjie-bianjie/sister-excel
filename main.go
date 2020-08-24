@@ -10,14 +10,17 @@ import (
 )
 
 func main() {
-	companies := service.Excel1(config.File1)
-	var companyNames []string
-	for _, company := range companies {
-		companyNames = append(companyNames, company.CompanyName)
-	}
+	//companies := service.Excel1(config.File1)
+	//var companyNames []string
+	//for _, company := range companies {
+	//	companyNames = append(companyNames, company.CompanyName)
+	//}
 
-	diffs := utils.Different(companyNames, service.Excel2(config.File2))
-	//diffs := utils.Different(service.Excel2(), companyNames)
+	// 之前的amy版本
+	//diffs := utils.Different(companyNames, service.Excel2(config.File2))
+
+	// 现在两个公司都在第二列的版本
+	diffs := utils.Different(service.Excel2(config.File1), service.Excel2(config.File2))
 
 	var fileStr string
 	fileStr = "总计：" + strconv.Itoa(len(diffs))

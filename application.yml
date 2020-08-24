@@ -1,3 +1,3 @@
 excel:
-  file1: "/Users/bianjie/temp/test1.xlsx"
-  file2: "/Users/bianjie/temp/test3.xlsx"
+  file1: "./excel/test1.xlsx"
+  file2: "./excel/test2.xlsx"
