@@ -6,14 +6,14 @@ import (
 	"github.com/360EntSecGroup-Skylar/excelize"
 )
 
-func Excel1(filePath string) []types.Company {
+func Excel1(filePath, sheet string) []types.Company {
 	f, err := excelize.OpenFile(filePath)
 	if err != nil {
 		fmt.Print("文件打开错误", err)
 		return nil
 	}
 
-	rows := f.GetRows("服务List")
+	rows := f.GetRows(sheet)
 
 	var companies []types.Company
 	// 获取工作表中指定的单元格
@@ -35,7 +35,7 @@ func Excel1(filePath string) []types.Company {
 	return result
 }
 
-func Excel2(filePath string) []string {
+func Excel2(filePath, sheet string) []string {
 	f, err := excelize.OpenFile(filePath)
 	if err != nil {
 		fmt.Print("文件打开错误", err)
@@ -43,7 +43,7 @@ func Excel2(filePath string) []string {
 	}
 
 	var companies []string
-	rows := f.GetRows("Sheet1")
+	rows := f.GetRows(sheet)
 	for _, row := range rows {
 		// 将公司放入List
 		company := row[1]

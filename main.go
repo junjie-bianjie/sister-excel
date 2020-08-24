@@ -20,7 +20,9 @@ func main() {
 	//diffs := utils.Different(companyNames, service.Excel2(config.File2))
 
 	// 现在两个公司都在第二列的版本
-	diffs := utils.Different(service.Excel2(config.File1), service.Excel2(config.File2))
+	excel1 := service.Excel2(config.Cof.Excel1.File, config.Cof.Excel1.SheetBook)
+	excel2 := service.Excel2(config.Cof.Excel2.File, config.Cof.Excel2.SheetBook)
+	diffs := utils.Different(excel1, excel2)
 
 	var fileStr string
 	fileStr = "总计：" + strconv.Itoa(len(diffs))

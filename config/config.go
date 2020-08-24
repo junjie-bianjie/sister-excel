@@ -6,17 +6,17 @@ import (
 )
 
 var (
-	File1 string
-	File2 string
+	Cof *Yaml
 )
 
 type Yaml struct {
-	Excel Excel `yaml:"excel"`
+	Excel1 Excel `yaml:"excel1"`
+	Excel2 Excel `yaml:"excel2"`
 }
 
 type Excel struct {
-	File1 string `yaml:"file1"`
-	File2 string `yaml:"file2"`
+	File      string `yaml:"file"`
+	SheetBook string `yaml:"sheetBook"`
 }
 
 func init() {
@@ -28,7 +28,5 @@ func init() {
 	if err := yaml.NewDecoder(f).Decode(cof); err != nil {
 		panic(err)
 	}
-
-	File1 = cof.Excel.File1
-	File2 = cof.Excel.File2
+	Cof = cof
 }

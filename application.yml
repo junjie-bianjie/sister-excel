@@ -1,3 +1,9 @@
-excel:
-  file1: "./excel/test1.xlsx"
-  file2: "./excel/test2.xlsx"
+# file 是文件目录 e.g. /C/a.txt
+# sheetBook 是excel中的工作薄 e.g. Sheet1
+excel1:
+  file: "./excel/test1.xlsx"
+  sheetBook: "服务List"
+
+excel2:
+  file: "./excel/test2.xlsx"
+  sheetBook: "Sheet1"
