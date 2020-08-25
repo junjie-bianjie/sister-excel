@@ -1,7 +1,8 @@
+# 请闹闹仔细看本demo
 # file 是文件目录 e.g. /C/a.txt
 # sheetBook 是excel中的工作薄 e.g. Sheet1
 # 注意file和sheetBook一定要对上！！！！！！！！！！不知道sheetBook是什么请打开excel看
-# 注意文件名一定不能是中文，中间不能出现空格 ！！！！
+# 注意文件名中间不能出现空格等特殊字符 ！！！！
 excel1:
   file: "./excel/缺.xlsx"
   sheetBook: "Sheet1"
