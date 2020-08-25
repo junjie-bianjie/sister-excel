@@ -3,6 +3,7 @@
 # sheetBook 是excel中的工作薄 e.g. Sheet1
 # 注意file和sheetBook一定要对上！！！！！！！！！！不知道sheetBook是什么请打开excel看
 # 注意文件名中间不能出现空格等特殊字符 ！！！！
+# ./是指当前目录  所以项目下的config目录 -> ./config ,  项目下的excel目录 -> /excel
 excel1:
   file: "./excel/缺.xlsx"
   sheetBook: "Sheet1"
