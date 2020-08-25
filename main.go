@@ -1,10 +1,12 @@
 package main
 
 import (
+	"fmt"
 	"forsisterexcel/config"
 	"forsisterexcel/service"
 	"forsisterexcel/utils"
 	"io/ioutil"
+	"log"
 	"os"
 	"strconv"
 )
@@ -29,5 +31,8 @@ func main() {
 	for _, v := range diffs {
 		fileStr += "\n" + v
 	}
-	ioutil.WriteFile("输出结果.txt", []byte(fileStr), os.ModePerm)
+	if err := ioutil.WriteFile("输出结果.txt", []byte(fileStr), os.ModePerm); err != nil {
+		log.Fatal("程序写入文件失败")
+	}
+	fmt.Print("--------------程序运行正确，请查看输出结果.txt--------------")
 }
