@@ -11,3 +11,6 @@ excel1:
 excel2:
   file: "./excel/困难户名单.xlsx"
   sheetBook: "缺"
+
+
+# 运行正确会在命令行中给出程序运行正确的提示
