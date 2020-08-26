@@ -1,9 +1,3 @@
-# 请闹闹仔细看本demo
-# file 是文件目录 e.g. /C/a.txt
-# sheetBook 是excel中的工作薄 e.g. Sheet1
-# 注意file和sheetBook一定要对上！！！！！！！！！！不知道sheetBook是什么请打开excel看
-# 注意文件名中间不能出现空格等特殊字符 ！！！！
-# ./是指当前目录  所以项目下的config目录 -> ./config ,  项目下的excel目录 -> ./excel
 excel1:
   file: "./excel/缺.xlsx"
   sheetBook: "Sheet1"
@@ -11,6 +5,3 @@ excel1:
 excel2:
   file: "./excel/困难户名单.xlsx"
   sheetBook: "缺"
-
-
-# 运行正确会在命令行中给出程序运行正确的提示
